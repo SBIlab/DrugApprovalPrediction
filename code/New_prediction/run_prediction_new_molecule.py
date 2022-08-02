@@ -9,7 +9,7 @@ def make_dataset(**kwargs):
 	for key, value in kwargs.items():
 		if(key == 'target'):
 			target = pd.read_csv(value, sep = '\t')
-			target_val = pd.read_csv('../data/target_value.tsv', sep = '\t')
+			target_val = pd.read_csv('../../data/target_value.tsv', sep = '\t')
 			drug_list = []
 			print('filtering molecule')
 			for i in trange(len(target)):
