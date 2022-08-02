@@ -1,0 +1,7 @@
+import make_target_score
+import make_ml_drug_set
+import run_ml
+
+make_target_score
+make_ml_drug_set
+run_ml
