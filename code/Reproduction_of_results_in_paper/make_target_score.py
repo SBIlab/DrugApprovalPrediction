@@ -17,16 +17,16 @@ exp = exp.loc[exp['Exp_level_mean'] != 0, :]
 
 scaler = MinMaxScaler()
 
-net['Network_rank_score'] = (scaler.fit_transform(pd.DataFrame(net['Degree Centrality'].rank(method = 'dense'))) + scaler.fit_transform(pd.DataFrame(net['Betweenness Centrality'].rank(method = 'dense')))) / 2
+net['Network'] = (scaler.fit_transform(pd.DataFrame(net['Degree Centrality'].rank(method = 'dense'))) + scaler.fit_transform(pd.DataFrame(net['Betweenness Centrality'].rank(method = 'dense')))) / 2
 
-exp['Expression_rank_score'] = (scaler.fit_transform(pd.DataFrame(exp['Exp_level_mean'].rank(method = 'dense'))) + scaler.fit_transform(pd.DataFrame(exp['Exp_broadness'].rank(method = 'dense')))) / 2
+exp['Expression'] = (scaler.fit_transform(pd.DataFrame(exp['Exp_level_mean'].rank(method = 'dense'))) + scaler.fit_transform(pd.DataFrame(exp['Exp_broadness'].rank(method = 'dense')))) / 2
 
 co_gene = list(set(ess['hg38_ensgid'].tolist()) & set(net['hg38_ensgid'].tolist()) & set(exp['hg38_ensgid'].tolist()))
 df_score = pd.DataFrame(data = {'hg38_ensgid' : co_gene})
 
 df_score = pd.merge(df_score, ess.loc[:,['hg38_ensgid','gene_id','CGE','OGE']], on = 'hg38_ensgid', how = 'left')
-df_score = pd.merge(df_score, net.loc[:,['hg38_ensgid','Network_rank_score']], on = 'hg38_ensgid', how = 'left')
-df_score = pd.merge(df_score, exp.loc[:,['hg38_ensgid','Expression_rank_score']], on = 'hg38_ensgid', how = 'left')
+df_score = pd.merge(df_score, net.loc[:,['hg38_ensgid','Network']], on = 'hg38_ensgid', how = 'left')
+df_score = pd.merge(df_score, exp.loc[:,['hg38_ensgid','Expression']], on = 'hg38_ensgid', how = 'left')
 
 df_score.to_csv('../../data/target_value.tsv', sep = '\t', header = True, index = False)
 

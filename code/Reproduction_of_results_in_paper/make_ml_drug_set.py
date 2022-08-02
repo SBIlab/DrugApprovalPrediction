@@ -4,7 +4,6 @@ from tqdm import trange
 drug = pd.read_csv('../../data/Drug_info.tsv', delimiter = '\t', header = 0)
 
 target = pd.read_csv('../../data/target_value.tsv', sep = '\t', header = 0)
-target.rename(columns = {'Network_rank_score' : 'Network', 'Expression_rank_score' : 'Expression'}, inplace = True)
 
 link = pd.read_csv('../../data/stitch_link_700_final.txt', sep = '\t', header = 0)
 link = link.loc[link['chemical'].isin(drug['STITCH ID'].tolist()) == True, :]
