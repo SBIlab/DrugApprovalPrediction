@@ -50,7 +50,7 @@ def prediction(dataset_path):
 
 	RF = RandomForestClassifier(n_estimators = 1000)
 	
-	train = pd.read_csv('../data/ML_drug_set.tsv', sep = '\t')
+	train = pd.read_csv('../../data/ML_dataset.tsv', sep = '\t')
 	train.loc[train['Drug status'] == 'unapproved', 'Drug status'] = 1
 	train.loc[train['Drug status'] == 'approved', 'Drug status'] = 0
 	train['Drug status'] = train['Drug status'].astype(int)
