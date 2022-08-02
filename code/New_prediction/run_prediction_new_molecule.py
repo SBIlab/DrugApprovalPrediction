@@ -41,7 +41,7 @@ def make_dataset(**kwargs):
 		if(len(set(['MolecularWeight','XLogP','HydrogenBondDonorCount','HydrogenBondAcceptorCount','PolarSurfaceArea','FormalCharge','NumRings','RotatableBondCount','Refractivity','Ro5','Ghose','Veber','wQED']) & set(df_dataset.columns))):
 			for col in ['MolecularWeight','XLogP','HydrogenBondDonorCount','HydrogenBondAcceptorCount','PolarSurfaceArea','FormalCharge','NumRings','RotatableBondCount','Refractivity','Ro5','Ghose','Veber','wQED']:
 				df_dataset.iloc[i,list(df_dataset.columns).index(col)] = chemical.loc[chemical.iloc[:,0] == df_dataset.iloc[i,0], [col]].iloc[0,0]
-	df_dataset.to_csv('../../result/new_molecule_prediction/New_molecule_dataset.tsv', sep = '\t', header = True, index = False)
+	df_dataset.to_csv('../../data/New_molecule_ML_dataset.tsv', sep = '\t', header = True, index = False)
 
 
 def prediction(dataset_path):
