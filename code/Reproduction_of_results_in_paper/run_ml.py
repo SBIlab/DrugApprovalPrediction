@@ -72,7 +72,7 @@ def rf(feature):
 	df_perf.to_csv('../../result/df_performance_' + f_name + '.tsv', sep = '\t', header = True, index = False)
 
 
-data = pd.read_csv('../../data/ML_drug_set.tsv', delimiter = '\t', header = 0)
+data = pd.read_csv('../../data/ML_dataset.tsv', delimiter = '\t', header = 0)
 feature_comb_list_temp = [['OGE','CGE'], ['OGE'], ['CGE'], ['OGE','CGE','Network','Expression'], ['Chemical'], ['OGE','CGE','Network','Expression','Chemical']]
 feature_comb_list = []
 for i in feature_comb_list_temp:
