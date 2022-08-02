@@ -53,7 +53,7 @@ Prediction results are generated under the './result/result_in_paper' folder.
 - predicted approval probabilities are provided under './result/new_molecule_prediction' folder.
 - Examples of input files (target.tsv & chemical.tsv) were provided under the './code/New_prediction' folder. 
 - Target genes of new molecule should be annotated with Ensembl gene id (see './code/New_prediction/target.tsv').
-- R scripts for extracting chemical information, which are provided under the './code/New_prediction/PrOCTOR', were downloaded from Gayvert et al. (https://github.com/kgayvert/PrOCTOR).
+- R scripts for extracting chemical information, which are provided under the './code/New_prediction/PrOCTOR', are downloaded from Gayvert et al. (https://github.com/kgayvert/PrOCTOR).
 ```
 source('PrOCTOR.R')
 getStructureFeatures(SMILE = 'CC(=O)Nc1ccc(O)cc1')
