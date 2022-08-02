@@ -27,4 +27,4 @@ for i in trange(len(df)):
 		df.iloc[i,list(df.columns).index(j)] = target_temp.loc[:,j].mean()
 	for j in list(chem.columns)[2:]:
 		df.iloc[i,list(df.columns).index(j)] = chem.loc[chem['STITCH ID'] == df.iloc[i,list(df.columns).index('STITCH ID')], [j]].iloc[0,0]
-df.to_csv('../../data/ML_drug_set.tsv', sep = '\t', header = True, index = False)
+df.to_csv('../../data/ML_dataset.tsv', sep = '\t', header = True, index = False)
