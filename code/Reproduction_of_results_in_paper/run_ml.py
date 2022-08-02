@@ -111,7 +111,7 @@ for file_ in proba_file_list:
 		df_temp = pd.read_csv('../../result/' + file_, sep = '\t')
 		df_sum = pd.merge(df_sum, df_temp, on = 'STITCH ID', how = 'left')
 	os.system('rm -rf ../../result/' + file_)
-df_sum.to_csv('../../result/df_approval_probability.tsv', sep = '\t', header = True, index = False)
+df_sum.to_csv('../../result/result_in_paper/df_approval_probability.tsv', sep = '\t', header = True, index = False)
 
 n = 0
 for file_ in perf_file_list:
@@ -122,4 +122,4 @@ for file_ in perf_file_list:
 		df_temp = pd.read_csv('../../result/' + file_, sep = '\t')
 		df_sum = pd.concat([df_sum, df_temp])
 	os.system('rm -rf ../../result/' + file_)
-df_sum.to_csv('../../result/df_prediction_performance.tsv', sep = '\t', header = True, index = False)
+df_sum.to_csv('../../result/result_in_paper/df_prediction_performance.tsv', sep = '\t', header = True, index = False)
