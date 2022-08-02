@@ -18,8 +18,12 @@ Source codes for generating results of "Drug approval prediction based on the di
 - ChemmineOB (1.28.4)
 - rcdk (3.6.0)
 - rcdklibs (2.3)
+- rJava (1.0-6)
 - Rcpi (1.26.0)
-
+- randomForest (4.6-14)
+- ggplot2 (3.3.6)
+- gridExtra (2.3)
+- data.table (1.14.2)
 
 ## Installation
 All python packages can be installed via pip (https://pypi.org/project/pip/). 
