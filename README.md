@@ -29,11 +29,10 @@ All R packages can be installed via BiocManager (https://github.com/Bioconductor
 Gnerally, a couple of minutes is needed for installing each package.
 
 ## DrugApprovalPrediction
+### Result reproduction
 - Code (run_all.py) for reproducing drug target information, machine learning dataset, Monte-Carlo cross-validation is provided under the './code/Reproduction_of_results_in_paper' folder.
 - Expected results (prediction performance & approval probability) are provided under './result/result_in_paper' folder.
 - The expected run time is under 90 minutes for running 1,000 times Monte-Carlo cross-validation.
-
-
 
 ```
 To make Monte-Carlo cross-validation predictions, run 'run_all.py' under the './code/Reproduction_of_results_in_paper' folder.
@@ -44,3 +43,5 @@ Use the following commnad line to run 'run_all.py' in linux.
    
 Prediction results are generated under the './result/result_in_paper' folder.
 ```
+
+### New molecule approval prediction
