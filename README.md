@@ -19,7 +19,7 @@ All packages can be installed via pip (https://pypi.org/project/pip/). Gnerally,
 
 ## DrugApprovalPrediction
 - Code (run_all.py) for reproducing drug target information, machine learning dataset, Monte-Carlo cross-validation is provided under the './code/Reproduction_of_results_in_paper' folder.
-- Expected results (prediction performance & approval probability) are provided under './result' folder.
+- Expected results (prediction performance & approval probability) are provided under './result/result_in_paper' folder.
 - The expected run time is under 90 minutes for running 1,000 times Monte-Carlo cross-validation.
 
 
@@ -31,5 +31,5 @@ Use the following commnad line to run 'run_all.py' in linux.
 
    $ python3 run_all.py
    
-Prediction results are generated under the './result' folder.
+Prediction results are generated under the './result/result_in_paper' folder.
 ```
