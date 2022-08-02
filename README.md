@@ -26,7 +26,7 @@ All packages can be installed via pip (https://pypi.org/project/pip/). Gnerally,
 '''
 To make Monte-Carlo cross-validation predictions, run 'run_all.py' under the './code/Reproduction_of_results_in_paper' folder.
 
-Use the following commnad line to run 'run_all.py in linux.
+Use the following commnad line to run 'run_all.py' in linux.
 
    $ python3 run_all.py
    
