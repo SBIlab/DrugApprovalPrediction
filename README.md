@@ -4,6 +4,7 @@ Source codes for generating results of "Drug approval prediction based on the di
 
 
 ## Requirements
+### python
 - python (3.7.9)
 - pandas (1.3.4)
 - numpy (1.18.5)
@@ -11,11 +12,21 @@ Source codes for generating results of "Drug approval prediction based on the di
 - gprofiler-official (1.0.0)
 - tqdm (4.59.0)
 
+### R
+- R (4.0.5)
+- ChemmineR (3.42.2)
+- ChemmineOB (1.28.4)
+- rcdk (3.6.0)
+- rcdklibs (2.3)
+- Rcpi (1.26.0)
+
+
 ## Installation
-All packages can be installed via pip (https://pypi.org/project/pip/). Gnerally, a couple of minutes is needed for installing each package.
+All python packages can be installed via pip (https://pypi.org/project/pip/). 
 
-**e.g.** pip install pandas
+All R packages can be installed via BiocManager (https://github.com/Bioconductor/BiocManager).
 
+Gnerally, a couple of minutes is needed for installing each package.
 
 ## DrugApprovalPrediction
 - Code (run_all.py) for reproducing drug target information, machine learning dataset, Monte-Carlo cross-validation is provided under the './code/Reproduction_of_results_in_paper' folder.
