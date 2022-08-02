@@ -41,7 +41,7 @@ def make_dataset(**kwargs):
 		if(len(set(['MolecularWeight','XLogP','HydrogenBondDonorCount','HydrogenBondAcceptorCount','PolarSurfaceArea','FormalCharge','NumRings','RotatableBondCount','Refractivity','Ro5','Ghose','Veber','wQED']) & set(df_dataset.columns))):
 			for col in ['MolecularWeight','XLogP','HydrogenBondDonorCount','HydrogenBondAcceptorCount','PolarSurfaceArea','FormalCharge','NumRings','RotatableBondCount','Refractivity','Ro5','Ghose','Veber','wQED']:
 				df_dataset.iloc[i,list(df_dataset.columns).index(col)] = chemical.loc[chemical.iloc[:,0] == df_dataset.iloc[i,0], [col]].iloc[0,0]
-	df_dataset.to_csv('../../result/New_molecule_prediction/New_molecule_dataset.tsv', sep = '\t', header = True, index = False)
+	df_dataset.to_csv('../../result/new_molecule_prediction/New_molecule_dataset.tsv', sep = '\t', header = True, index = False)
 
 
 def prediction(dataset_path):
@@ -63,4 +63,4 @@ def prediction(dataset_path):
 	df_proba = pd.DataFrame(data = {'Molecule' : df['Molecule'].tolist(), 'Approval probability' : list(y_proba[:,0])}, columns = ['Molecule','Approval probability', 'Predicted drug status'])
 	df_proba.loc[df_proba['Approval probability'] >= 0.5, 'Predicted drug status'] = 'Approved'
 	df_proba.loc[df_proba['Approval probability'] < 0.5, 'Predicted drug status'] = 'Unapproved'
-	df_proba.to_csv('../../result/New_molecule_prediction/New_molecule_approval_probability.tsv', sep = '\t', header = True, index = False)
+	df_proba.to_csv('../../result/new_molecule_prediction/New_molecule_approval_probability.tsv', sep = '\t', header = True, index = False)
