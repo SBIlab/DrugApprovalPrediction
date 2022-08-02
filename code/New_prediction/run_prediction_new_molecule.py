@@ -7,7 +7,7 @@ def make_dataset(drug_target_file_path, chemical_file_path):
 	target = pd.read_csv(drug_target_file_path, sep = '\t')
 	chemical = pd.read_csv(chemical_file_path, sep = '\t')
 
-	target_val = pd.read_csv('../data/target_value.tsv', sep = '\t')
+	target_val = pd.read_csv('../../data/target_value.tsv', sep = '\t')
 	drug_list = []
 	print('filtering molecule')
 	for i in trange(len(target)):
@@ -25,7 +25,7 @@ def make_dataset(drug_target_file_path, chemical_file_path):
 			df_dataset.iloc[i,list(df_dataset.columns).index(col)] = target_val.loc[target_val['gene_id'].isin(dt_temp) == True, col].mean()
 		for col in ['MolecularWeight','XLogP','HydrogenBondDonorCount','HydrogenBondAcceptorCount','PolarSurfaceArea','FormalCharge','NumRings','RotatableBondCount','Refractivity','Ro5','Ghose','Veber','wQED']:
 			df_dataset.iloc[i,list(df_dataset.columns).index(col)] = chemical.loc[chemical.iloc[:,0] == df_dataset.iloc[i,0], [col]].iloc[0,0]
-	df_dataset.to_csv('./dataset.tsv', sep = '\t', header = True, index = False)
+	df_dataset.to_csv('../../result/new_molecule_prediction/New_molecule_dataset.tsv', sep = '\t', header = True, index = False)
 
 
 def prediction(dataset_path):
@@ -51,5 +51,5 @@ def prediction(dataset_path):
 		else:
 			df_proba.iloc[i,2] = 'Unapproved'
 	
-	df_proba.to_csv('./df_predicted_approval_probability.tsv', sep = '\t', header = True, index = False)
+	df_proba.to_csv('../../result/new_molecule_prediction/New_molecule_approval_probability.tsv', sep = '\t', header = True, index = False)
 	return df_proba
