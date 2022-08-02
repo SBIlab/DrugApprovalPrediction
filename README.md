@@ -23,7 +23,8 @@ All packages can be installed via pip (https://pypi.org/project/pip/). Gnerally,
 - The expected run time is under 90 minutes for running 1,000 times Monte-Carlo cross-validation.
 
 
-'''
+
+```
 To make Monte-Carlo cross-validation predictions, run 'run_all.py' under the './code/Reproduction_of_results_in_paper' folder.
 
 Use the following commnad line to run 'run_all.py' in linux.
@@ -31,4 +32,4 @@ Use the following commnad line to run 'run_all.py' in linux.
    $ python3 run_all.py
    
 Prediction results are generated under the './result' folder.
-'''
+```
