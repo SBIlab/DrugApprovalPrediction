@@ -52,12 +52,15 @@ Prediction results are generated under the './result/result_in_paper' folder.
 - Code (run_prediction_new_molecule.py) for predicting new molecules' approval probabilities is provided under the './code/New_prediction' folder.
 - Result of predicted approval probabilities are provided under './result/new_molecule_prediction' folder.
 - Examples of input files (target.tsv & chemical.tsv) were provided under the './code/New_prediction' folder. 
+- Either target information file or chemical information file should be necessary.
 - Target genes of new molecule should be annotated with Ensembl gene id (see './code/New_prediction/target.tsv').
 
 ```
 from run_prediction_new_molecule import *
-make_dataset(target = './target.tsv', chemical = './chemical.tsv') # 'New_molecule_ML_dataset.tsv' is saved under './data' folder.
-prediction('./data/New_molecule_ML_dataset.tsv') # 'New_molecule_approval_probabiliy.tsv' is saved under './result/new_molecule_prediction' folder.
+
+make_dataset(target = './target.tsv', chemical = './chemical.tsv')     # 'New_molecule_ML_dataset.tsv' is saved under './data' folder.
+
+prediction('./data/New_molecule_ML_dataset.tsv')     # 'New_molecule_approval_probabiliy.tsv' is saved under './result/new_molecule_prediction' folder.
 ```
 
 - R scripts for extracting chemical information, which are provided under the './code/New_prediction/PrOCTOR', are downloaded from Gayvert et al. (https://github.com/kgayvert/PrOCTOR).
