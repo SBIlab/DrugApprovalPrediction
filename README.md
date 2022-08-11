@@ -48,7 +48,7 @@ All codes for results reproduction is provided under the'./code/Reproduction_of_
 - "visualize_result.py" to visualize the results from "run_ml.py"
 - "run_all.py" to run the above code at once.
 
-- Expected results (prediction performance & approval probability) are provided under './result/result_in_paper' folder.
+- Expected results (prediction performance & approval probability) are provided under './result/Results_in_paper' folder.
 - The expected run time is under 90 minutes for running 1,000 times Monte-Carlo cross-validation.
 
 ```
@@ -58,7 +58,7 @@ Use the following commnad line to run 'run_all.py' in linux.
 
    $ python3 run_all.py
    
-Prediction results are generated under the './result/result_in_paper' folder.
+Prediction results are generated under the './result/Results_in_paper' folder.
 ```
 
 ### New molecule approval prediction
