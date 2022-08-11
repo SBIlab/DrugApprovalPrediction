@@ -73,7 +73,7 @@ from run_prediction_new_molecule import *
 
 make_new_molecule_dataset(target = './target.tsv', chemical = './chemical.tsv')     # 'New_molecule_ML_dataset.tsv' is saved under './data' folder.
 
-prediction('./data/New_molecule_ML_dataset.tsv')     # 'New_molecule_approval_probability.tsv' is saved under './result/new_molecule_prediction' folder.
+prediction('./data/New_molecule_ML_dataset.tsv')     # 'New_molecule_approval_probability.tsv' is saved under './result/New_molecule_prediction' folder.
 ```
 
 - R scripts for extracting chemical information, which are provided under the './code/New_molecule_prediction/PrOCTOR', are downloaded from Gayvert et al. (https://github.com/kgayvert/PrOCTOR).
