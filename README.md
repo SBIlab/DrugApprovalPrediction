@@ -7,10 +7,13 @@ Source codes for generating results of "Drug approval prediction based on the di
 ### python
 - python (3.7.9)
 - pandas (1.3.4)
-- numpy (1.18.5)
+- numpy (1.21.6)
 - scipy (1.6.0)
 - scikit-learn (0.24.2)
+- networkx (2.4)
 - gprofiler-official (1.0.0)
+- matplotlib (3.3.1)
+- seaborn (0.11.0)
 - tqdm (4.59.0)
 
 ### R
@@ -27,15 +30,25 @@ Source codes for generating results of "Drug approval prediction based on the di
 - data.table (1.14.2)
 
 ## Installation
-All python packages can be installed via pip (https://pypi.org/project/pip/). 
+All python packages can be installed via pip (https://pypi.org/project/pip/).
+pip install [package name]
+e.g. pip install pandas
 
 All R packages can be installed via BiocManager (https://github.com/Bioconductor/BiocManager).
+Details in PrOCTOR (https://github.com/kgayvert/PrOCTOR).
 
 Gnerally, a couple of minutes is needed for installing each package.
 
 ## DrugApprovalPrediction
+### Codes (for drug approval prediction)
+- "make_gene_info.py" to generate data table organizing drug target information values for genes
+- "make_ml_dataset.py" to generate datasets of machine learning for DrugApprovalPrediction 
+- "run_ml.py" to make prediction for drug approval probability using Monte-Carlo cross-validation
+- "visualize_result.py" to visualize the results from "run_ml.py"
+- "run_all.py" to run the above code at once.
+
 ### Result reproduction
-- Code (run_all.py) for reproducing drug target information, machine learning dataset, Monte-Carlo cross-validation is provided under the './code/Reproduction_of_results_in_paper' folder.
+- Code (run_all.py) for reproducing the drug target information, machine learning dataset, prediction of drug approval using Monte-Carlo cross-validation, and visualization of the results is provided under the './code/Reproduction_of_results_in_paper' folder.
 - Expected results (prediction performance & approval probability) are provided under './result/result_in_paper' folder.
 - The expected run time is under 90 minutes for running 1,000 times Monte-Carlo cross-validation.
 
