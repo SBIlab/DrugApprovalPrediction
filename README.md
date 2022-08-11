@@ -8,6 +8,7 @@ Source codes for generating results of "Drug approval prediction based on the di
 - python (3.7.9)
 - pandas (1.3.4)
 - numpy (1.18.5)
+- scipy (1.6.0)
 - scikit-learn (0.24.2)
 - gprofiler-official (1.0.0)
 - tqdm (4.59.0)
