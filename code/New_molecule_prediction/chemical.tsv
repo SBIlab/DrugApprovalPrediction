@@ -1,2 +1,2 @@
 Molecule	MolecularWeight	XLogP	HydrogenBondDonorCount	HydrogenBondAcceptorCount	PolarSurfaceArea	FormalCharge	NumRings	RotatableBondCount	Refractivity	Ro5	Ghose	Veber	wQED
-Paracetamol	151.16256	1.4236	2	3	49.33	0	1	2	42.7777	1	0	1	0.628316152
+Molecule_1	151.16256	1.4236	2	3	49.33	0	1	2	42.7777	1	0	1	0.628316152
