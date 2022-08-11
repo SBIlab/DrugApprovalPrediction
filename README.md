@@ -41,12 +41,13 @@ Gnerally, a couple of minutes is needed for installing each package.
 
 ## DrugApprovalPrediction
 ### Codes for results reproduction
+All codes for results reproduction is provided under the'./code/Reproduction_of_results_in_paper' folder.
 - "make_gene_info.py" to generate data table organizing drug target information values for genes
 - "make_ml_dataset.py" to generate datasets of machine learning for DrugApprovalPrediction 
 - "run_ml.py" to make prediction for drug approval probability using Monte-Carlo cross-validation
 - "visualize_result.py" to visualize the results from "run_ml.py"
 - "run_all.py" to run the above code at once.
-- Code (run_all.py) for reproducing the drug target information, machine learning dataset, prediction of drug approval using Monte-Carlo cross-validation, and visualization of the results is provided under the './code/Reproduction_of_results_in_paper' folder.
+
 - Expected results (prediction performance & approval probability) are provided under './result/result_in_paper' folder.
 - The expected run time is under 90 minutes for running 1,000 times Monte-Carlo cross-validation.
 
